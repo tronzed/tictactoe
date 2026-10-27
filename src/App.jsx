@@ -3,7 +3,8 @@ import './App.css'
 
 function App() {
 
-  const [cross,setCross] = useState();
+  const [cross1,setCross1] = useState(false);
+
 
   return (
     <>
@@ -12,7 +13,7 @@ function App() {
         <div className="tictac_box">
           <div className="item cross_box"></div>
           <div className="item round_box"></div>
-          <div className="item"></div>
+          <div onClick={(e) => { setCross1(!cross1) }} className={`item ${cross1? "cross_box":""}`}></div>
           <div className="item"></div>
           <div className="item"></div>
           <div className="item"></div>
