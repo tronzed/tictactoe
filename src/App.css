@@ -1,0 +1,69 @@
+.tictac_cover {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tictac_cover .tictac_box {
+    width: 450px;
+    height: 450px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.tictac_cover .tictac_box .item {
+    width: 150px;
+    height: 150px;
+    border-left: 0;
+    border-top: 0;
+    cursor: pointer;
+    position: relative;
+}
+
+.tictac_cover .tictac_box .item.cross_box:after {
+    content: "";
+    height: 100%;
+    width: 8px;
+    background-color: #3d3cf1;
+    display: block;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+.tictac_cover .tictac_box .item.cross_box::before {
+    content: "";
+    height: 100%;
+    width: 8px;
+    background-color: #3d3cf1;
+    display: block;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+.tictac_cover .tictac_box .item:nth-child(even) {
+    background-color: #d5d5d5;
+}
+
+.tictac_cover .tictac_box .item.round_box::after {
+    content: "";
+    display: block;
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: 8px solid #fd3636;
+    border-radius: 100%;
+}
